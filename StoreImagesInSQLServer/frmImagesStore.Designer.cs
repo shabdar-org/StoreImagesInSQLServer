@@ -36,6 +36,7 @@ namespace StoreImagesInSQLServer
             this.cmdStoreNewImage = new System.Windows.Forms.Button();
             this.cmdConnect = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdDeleteImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -46,6 +47,7 @@ namespace StoreImagesInSQLServer
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(38, 113);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(372, 315);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
@@ -53,12 +55,13 @@ namespace StoreImagesInSQLServer
             // txtConnectionString
             // 
             this.txtConnectionString.Location = new System.Drawing.Point(105, 36);
+            this.txtConnectionString.Multiline = true;
             this.txtConnectionString.Name = "txtConnectionString";
-            this.txtConnectionString.Size = new System.Drawing.Size(520, 20);
+            this.txtConnectionString.Size = new System.Drawing.Size(672, 40);
             this.txtConnectionString.TabIndex = 1;
-            this.txtConnectionString.Text = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\user2021\\Downloads\\S" +
-    "toreImagesInSQLServer\\StoreImagesInSQLServer\\ImageStore.mdf;Integrated Security=" +
-    "True";
+            this.txtConnectionString.Text = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\user2021\\source\\repo" +
+    "s\\StoreImagesInSQLServer\\StoreImagesInSQLServer\\ImageStore.mdf;Integrated Securi" +
+    "ty=True";
             // 
             // label1
             // 
@@ -74,10 +77,9 @@ namespace StoreImagesInSQLServer
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(102, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(431, 13);
+            this.label2.Size = new System.Drawing.Size(257, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Restore database provided in source code zip file and change following connection" +
-    " string.";
+            this.label2.Text = "Change database file path in below connection string";
             // 
             // pictureBox1
             // 
@@ -100,7 +102,7 @@ namespace StoreImagesInSQLServer
             // 
             // cmdConnect
             // 
-            this.cmdConnect.Location = new System.Drawing.Point(105, 62);
+            this.cmdConnect.Location = new System.Drawing.Point(105, 82);
             this.cmdConnect.Name = "cmdConnect";
             this.cmdConnect.Size = new System.Drawing.Size(91, 25);
             this.cmdConnect.TabIndex = 6;
@@ -117,11 +119,22 @@ namespace StoreImagesInSQLServer
             this.panel1.Size = new System.Drawing.Size(407, 331);
             this.panel1.TabIndex = 7;
             // 
+            // cmdDeleteImage
+            // 
+            this.cmdDeleteImage.Location = new System.Drawing.Point(166, 434);
+            this.cmdDeleteImage.Name = "cmdDeleteImage";
+            this.cmdDeleteImage.Size = new System.Drawing.Size(144, 25);
+            this.cmdDeleteImage.TabIndex = 8;
+            this.cmdDeleteImage.Text = "Delete Selected Image";
+            this.cmdDeleteImage.UseVisualStyleBackColor = true;
+            this.cmdDeleteImage.Click += new System.EventHandler(this.cmdDeleteImage_Click);
+            // 
             // frmImagesStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 475);
+            this.Controls.Add(this.cmdDeleteImage);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdConnect);
             this.Controls.Add(this.cmdStoreNewImage);
@@ -151,6 +164,7 @@ namespace StoreImagesInSQLServer
         private System.Windows.Forms.Button cmdStoreNewImage;
         private System.Windows.Forms.Button cmdConnect;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button cmdDeleteImage;
     }
 }
 

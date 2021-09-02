@@ -66,22 +66,25 @@ namespace StoreImagesInSQLServer
         {
             try
             {
-                //Get image data from gridview column.
-                byte[] imageData = (byte[])dataGridView1.Rows[e.RowIndex].Cells["ImageData"].Value;
-
-                //Initialize image variable
-                Image newImage;
-                //Read image data into a memory stream
-                using (MemoryStream ms = new MemoryStream(imageData, 0, imageData.Length))
+                if (e.RowIndex<dataGridView1.Rows.Count-1)
                 {
-                    ms.Write(imageData, 0, imageData.Length);
+                    //Get image data from gridview column.
+                    byte[] imageData = (byte[])dataGridView1.Rows[e.RowIndex].Cells["ImageData"].Value;
 
-                    //Set image variable value using memory stream.
-                    newImage = Image.FromStream(ms, true);
+                    //Initialize image variable
+                    Image newImage;
+                    //Read image data into a memory stream
+                    using (MemoryStream ms = new MemoryStream(imageData, 0, imageData.Length))
+                    {
+                        ms.Write(imageData, 0, imageData.Length);
+
+                        //Set image variable value using memory stream.
+                        newImage = Image.FromStream(ms, true);
+                    }
+                    //
+                    //set picture
+                    pictureBox1.Image = newImage;
                 }
-                //
-                //set picture
-                pictureBox1.Image = newImage;
             }
             catch(Exception ex)
             {
@@ -93,6 +96,45 @@ namespace StoreImagesInSQLServer
         {
 
         }
-        
+
+        private void cmdDeleteImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(dataGridView1.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Select a row first in Grid");
+                    return;
+                }
+                object selectedImageId = dataGridView1.SelectedRows[0].Cells[0].Value;
+                if (MessageBox.Show("Are you sure to delete this record?","Delete",MessageBoxButtons.YesNo)== DialogResult.Yes)
+                {
+                    //Initialize SQL Server Connection
+                    SqlConnection CN = new SqlConnection(txtConnectionString.Text);
+
+                    //Set insert query
+                    string qry = "delete from ImagesStore where ImageId=@ImageId";
+
+                    //Initialize SqlCommand object for insert.
+                    SqlCommand SqlCom = new SqlCommand(qry, CN);
+
+                    //We are passing Original Image Path and Image byte data as sql parameters.
+                    SqlCom.Parameters.Add(new SqlParameter("@ImageId", selectedImageId));
+            
+                    //Open connection and execute insert query.
+                    CN.Open();
+                    SqlCom.ExecuteNonQuery();
+                    CN.Close();
+
+                    //Refresh Grid after deleting record
+                    cmdConnect_Click(null, null);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

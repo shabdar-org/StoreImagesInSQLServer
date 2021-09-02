@@ -41,7 +41,7 @@ namespace StoreImagesInSQLServer
             // 
             // cmdBrowse
             // 
-            this.cmdBrowse.Location = new System.Drawing.Point(435, 39);
+            this.cmdBrowse.Location = new System.Drawing.Point(435, 59);
             this.cmdBrowse.Name = "cmdBrowse";
             this.cmdBrowse.Size = new System.Drawing.Size(85, 21);
             this.cmdBrowse.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace StoreImagesInSQLServer
             // 
             // txtImagePath
             // 
-            this.txtImagePath.Location = new System.Drawing.Point(105, 40);
+            this.txtImagePath.Location = new System.Drawing.Point(105, 60);
             this.txtImagePath.Name = "txtImagePath";
             this.txtImagePath.ReadOnly = true;
             this.txtImagePath.Size = new System.Drawing.Size(324, 20);
@@ -60,7 +60,7 @@ namespace StoreImagesInSQLServer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 42);
+            this.label1.Location = new System.Drawing.Point(30, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace StoreImagesInSQLServer
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(105, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 94);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(415, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,11 +107,14 @@ namespace StoreImagesInSQLServer
             // txtConnectionString
             // 
             this.txtConnectionString.Location = new System.Drawing.Point(105, 7);
+            this.txtConnectionString.Multiline = true;
             this.txtConnectionString.Name = "txtConnectionString";
             this.txtConnectionString.ReadOnly = true;
-            this.txtConnectionString.Size = new System.Drawing.Size(415, 20);
+            this.txtConnectionString.Size = new System.Drawing.Size(484, 38);
             this.txtConnectionString.TabIndex = 6;
-            this.txtConnectionString.Text = "Data Source=D820001\\MSDE;Initial Catalog=ImagesDB;Integrated Security=SSPI;";
+            this.txtConnectionString.Text = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\user2021\\source\\repo" +
+    "s\\StoreImagesInSQLServer\\StoreImagesInSQLServer\\ImageStore.mdf;Integrated Securi" +
+    "ty=True";
             // 
             // frmNewImage
             // 
