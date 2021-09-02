@@ -79,7 +79,7 @@ namespace StoreImagesInSQLServer
                     //Set image variable value using memory stream.
                     newImage = Image.FromStream(ms, true);
                 }
-
+                //
                 //set picture
                 pictureBox1.Image = newImage;
             }
