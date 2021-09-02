@@ -1,3 +1,2 @@
--Restore database from SQL Database directory. 
--If some how you can not restore provided database, you can generate necessary table using scripts provided in SQL Database directory.
--Change connection string on form.
+This is a C# project developed using Visual Studio 2019.
+This project demonstrates how to store image in SQL Server Database. It uses a simple windows form to display images from database in a data grid. It also allows you to upload and store new image. Finally you can also Delete store image record from database.
