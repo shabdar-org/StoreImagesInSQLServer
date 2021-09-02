@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreImagesInSQLServer", "StoreImagesInSQLServer\StoreImagesInSQLServer.csproj", "{B814DB30-8799-4F64-95FC-DE225311EE2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B814DB30-8799-4F64-95FC-DE225311EE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B814DB30-8799-4F64-95FC-DE225311EE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B814DB30-8799-4F64-95FC-DE225311EE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B814DB30-8799-4F64-95FC-DE225311EE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {120D7F47-BDF0-4F34-AB83-CA7677F8C21C}
+	EndGlobalSection
+EndGlobal

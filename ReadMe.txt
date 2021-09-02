@@ -1,0 +1,3 @@
+-Restore database from SQL Database directory. 
+-If some how you can not restore provided database, you can generate necessary table using scripts provided in SQL Database directory.
+-Change connection string on form.
