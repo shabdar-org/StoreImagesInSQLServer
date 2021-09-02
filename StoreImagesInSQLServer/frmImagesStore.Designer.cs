@@ -77,16 +77,17 @@ namespace StoreImagesInSQLServer
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(102, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 13);
+            this.label2.Size = new System.Drawing.Size(401, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Change database file path in below connection string";
+            this.label2.Text = "Change database file path in below connection string as per your local project fo" +
+    "lder";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(389, 315);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -148,7 +149,6 @@ namespace StoreImagesInSQLServer
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
