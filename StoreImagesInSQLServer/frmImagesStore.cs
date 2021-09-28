@@ -67,7 +67,7 @@ namespace StoreImagesInSQLServer
             try
             {
                 if (e.RowIndex<dataGridView1.Rows.Count-1)
-                { 
+                {
                     //Get image data from gridview column.
                     byte[] imageData = (byte[])dataGridView1.Rows[e.RowIndex].Cells["ImageData"].Value;
 
