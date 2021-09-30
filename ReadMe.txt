@@ -1,8 +1,7 @@
-This is a C# project developed using Visual Studio 2019 Community Edition.
-This project demonstrates how to store/delete image in SQL Server table. 
-It uses a simple windows form to display images from database in a data grid. 
-It also allows you to upload and store new images in SQL Server database. 
-Finally you can also Delete image record from table.
+-This sample demonstrates how to store images in SQL Server database
+-If somehow you can not use provided FileStore.mdf database then you can generate necessary table using scripts provided in "FileStore.sql" file.
+-Change connection string on both forms to point to correct path for mdf file.
+-For detailed instructions visit -> https://shabdar.org/2021/09/01/store-image-in-sql-server-datab/
 
 Usage:
 1. Before running, change connection string in Connection String textbox to point to correct path for ImageStore.mdf file.
